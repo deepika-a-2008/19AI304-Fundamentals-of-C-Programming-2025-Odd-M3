@@ -28,7 +28,11 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 ### Step 8: 
    Stop
 # Program:
+<img width="737" height="698" alt="image" src="https://github.com/user-attachments/assets/4bd64c79-26b9-4530-8aa9-c60ef8a64b35" />
+
 # Output:
+<img width="497" height="265" alt="image" src="https://github.com/user-attachments/assets/0e0a9a90-075e-44dd-bb9f-27380f3022b8" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -67,7 +71,68 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 9: 
   Stop
 # Program:
+```#include <stdio.h>
+
+int main()
+{
+    int a[10][10], row, col;
+    int i, j, k;
+    int min, saddleCol;
+    int found = 0;
+    printf("Enter number of rows: ");
+    scanf("%d", &row);
+    printf("Enter number of columns: ");
+    scanf("%d", &col);
+    printf("Enter matrix elements:\n");
+
+    for(i = 0; i < row; i++)
+    {
+        for(j = 0; j < col; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(i = 0; i < row; i++)
+    {
+        min = a[i][0];
+        saddleCol = 0;
+        for(j = 1; j < col; j++)
+        {
+            if(a[i][j] < min)
+            {
+                min = a[i][j];
+                saddleCol = j;
+            }
+        }
+        for(k = 0; k < row; k++)
+        {
+            if(a[k][saddleCol] > min)
+            {
+                break;
+            }
+        }
+        if(k == row)
+        {
+            printf("\nSaddle Point Found!\n");
+            printf("Value = %d\n", min);
+            printf("Position = (%d, %d)\n", i, saddleCol);
+
+            found = 1;
+            break;
+        }
+    }
+    if(found == 0)
+    {
+        printf("\nNo Saddle Point Found");
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="570" height="396" alt="image" src="https://github.com/user-attachments/assets/d9635e16-2032-4ad3-88a3-9305fccfb5c5" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -101,7 +166,11 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10: 
   Stop
 # Program:
+<img width="816" height="735" alt="image" src="https://github.com/user-attachments/assets/0bde4a4d-6b7c-458c-aa48-2a0cee90ba2a" />
+
 # Output:
+<img width="493" height="305" alt="image" src="https://github.com/user-attachments/assets/ffc71762-29d3-4e06-8385-c61ba41714eb" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -135,7 +204,11 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:
   Stop
 # Program:
+<img width="936" height="855" alt="image" src="https://github.com/user-attachments/assets/00efb17e-5666-4eed-a4d8-f8a4f08a7d6d" />
+
 # Output:
+<img width="581" height="500" alt="image" src="https://github.com/user-attachments/assets/622f97c1-ea78-44f0-b768-9f2f13b5cd69" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -169,7 +242,11 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8: 
   Stop
 # Program:
+<img width="907" height="977" alt="image" src="https://github.com/user-attachments/assets/ab2b63b8-1435-4f2d-abab-b231ad387c3b" />
+
 # Output:
+<img width="713" height="215" alt="image" src="https://github.com/user-attachments/assets/b8a94e70-48e7-4eaa-a310-c26e0f1444f3" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
